@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjekatRMA.Views.FormView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker  
+                SelectedIndexChanged="PozicijaPicker_SelectedIndexChanged"
+                x:Name="PozicijaPicker"
+                Title="Odaberite poziciju"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding Pozicija}"
+                />
+            <Picker
+                SelectedIndexChanged="StrankaPicker_SelectedIndexChanged"
+                x:Name="StrankaPicker"
+                Title="Odaberite Stranku"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding Stranka}"
+                />
+            <Picker
+                x:Name="KandidatPicker"
+                Title="Odaberite Kandidata"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding Kandidat}"
+                />
+            <Button Clicked="DajGlas_Clicked"  Text="Daj Glas" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            <Button Clicked="Nastavi_Clicked" Text="Nastavi dalje" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

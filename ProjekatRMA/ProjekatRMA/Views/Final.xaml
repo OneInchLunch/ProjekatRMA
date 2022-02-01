@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjekatRMA.Views.Final"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+            <StackLayout>
+            <Label Text="Glasanje završeno"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <ScrollView>
+                <ListView x:Name="results"/>
+                </ScrollView>
+            <Button Clicked="Zavrsi_Clicked" Text="Završi" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
