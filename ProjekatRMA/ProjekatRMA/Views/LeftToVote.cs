@@ -15,32 +15,32 @@ namespace ProjekatRMA.Views
         public static bool voted = false;
         static LeftToVote()
         {
-            NewKandidatList.Add(new Kandidat(1, "Bakir", "Izetbegović"));
+            NewKandidatList.Add(new Kandidat(1, "Bakir Izetbegović"));
             NewStrankaList.Add(new Stranka(1, "SDA", NewKandidatList));
             NewKandidatList.Clear();
-            NewKandidatList.Add(new Kandidat(1, "Milorad", "Dodik"));
+            NewKandidatList.Add(new Kandidat(1, "Milorad Dodik"));
             NewStrankaList.Add(new Stranka(2, "SNSD", NewKandidatList));
             NewKandidatList.Clear();
-            NewKandidatList.Add(new Kandidat(1, "Dragan", "Čović"));
+            NewKandidatList.Add(new Kandidat(1, "Dragan Čović"));
             NewStrankaList.Add(new Stranka(3, "HDZ", NewKandidatList));
             NewKandidatList.Clear();
 
             PozicijaList.Add(new Pozicija(1, "Predsjedništvo", NewStrankaList));
             NewStrankaList.Clear();
 
-            NewKandidatList.Add(new Kandidat(1, "Amir", "Mrkonjić"));
-            NewKandidatList.Add(new Kandidat(2, "Amar", "Lagumdžija"));
-            NewKandidatList.Add(new Kandidat(3, "Mirza", "Babić"));
+            NewKandidatList.Add(new Kandidat(1, "Amir Mrkonjić"));
+            NewKandidatList.Add(new Kandidat(2, "Amar Lagumdžija"));
+            NewKandidatList.Add(new Kandidat(3, "Mirza Babić"));
             NewStrankaList.Add(new Stranka(1, "SDA", NewKandidatList));
             NewKandidatList.Clear();
-            NewKandidatList.Add(new Kandidat(1, "Lejla", "Vardo"));
-            NewKandidatList.Add(new Kandidat(2, "Džana", "Spahović"));
-            NewKandidatList.Add(new Kandidat(3, "Dženan", "Beganović"));
+            NewKandidatList.Add(new Kandidat(1, "Lejla Vardo"));
+            NewKandidatList.Add(new Kandidat(2, "Džana Spahović"));
+            NewKandidatList.Add(new Kandidat(3, "Dženan Beganović"));
             NewStrankaList.Add(new Stranka(2, "SNSD", NewKandidatList));
             NewKandidatList.Clear();
-            NewKandidatList.Add(new Kandidat(1, "Imran", "Džanović"));
-            NewKandidatList.Add(new Kandidat(2, "Alem", "Duraković"));
-            NewKandidatList.Add(new Kandidat(3, "Tarik", "Valjevac"));
+            NewKandidatList.Add(new Kandidat(1, "Imran Džanović"));
+            NewKandidatList.Add(new Kandidat(2, "Alem Duraković"));
+            NewKandidatList.Add(new Kandidat(3, "Tarik Valjevac"));
             NewStrankaList.Add(new Stranka(3, "HDZ", NewKandidatList));
             NewKandidatList.Clear();
 

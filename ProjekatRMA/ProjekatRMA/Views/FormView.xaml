@@ -1,31 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjekatRMA.Views.FormView">
+             x:Class="ProjekatRMA.Views.FormView"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="Wheat">
     <ContentPage.Content>
-        <StackLayout>
-            <Picker  
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout Margin="0, 0, 0, 200">
+                <Picker
+                HorizontalTextAlignment="Center"
                 SelectedIndexChanged="PozicijaPicker_SelectedIndexChanged"
                 x:Name="PozicijaPicker"
                 Title="Odaberite poziciju"
                 ItemDisplayBinding="{Binding Name}"
                 SelectedItem="{Binding Pozicija}"
                 />
-            <Picker
+                <Picker
+                HorizontalTextAlignment="Center"
                 SelectedIndexChanged="StrankaPicker_SelectedIndexChanged"
                 x:Name="StrankaPicker"
                 Title="Odaberite Stranku"
                 ItemDisplayBinding="{Binding Name}"
                 SelectedItem="{Binding Stranka}"
                 />
-            <Picker
+                <Picker
+                HorizontalTextAlignment="Center"
                 x:Name="KandidatPicker"
                 Title="Odaberite Kandidata"
-                ItemDisplayBinding="{Binding Name}"
+                ItemDisplayBinding="{Binding FullName}"
                 SelectedItem="{Binding Kandidat}"
                 />
-            <Button Clicked="DajGlas_Clicked"  Text="Daj Glas" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
-            <Button Clicked="Nastavi_Clicked" Text="Nastavi dalje" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" WidthRequest="330">
+                <Label HorizontalTextAlignment="Center">*Nakon davanja glasa nećete ga moći poništiti</Label>
+                <Button Clicked="DajGlas_Clicked"  Text="Daj Glas" Padding="20,10" Margin="0,0,0,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+                <Label HorizontalTextAlignment="Center">*Nakon što odaberete opciju "Završi glasanje" nećete se moći više vratiti</Label>
+                <Button Clicked="Nastavi_Clicked" Text="Završi glasanje" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

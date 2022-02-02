@@ -5,8 +5,18 @@
              NavigationPage.HasNavigationBar="false"
              x:Class="ProjekatRMA.Views.SplashScreen"
              Title="Špica">
-    
-    <StackLayout>
-        <Button Clicked ="ToScanner" Text="Nastavi dalje" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+    <StackLayout Padding="0, 0, 0, 150" BackgroundColor="Wheat">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="E - Izbori"
+                   FontSize="40"
+                   HorizontalTextAlignment="Center" />
+            <Image Source="grbbih.png" Margin="0,20,0,10"/>
+            <Label Text="Dobrodošli!"
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center" />
+        </StackLayout>
+        <StackLayout>
+            <Button Clicked ="ToScanner" Text="Nastavi dalje" Padding="20,10" BackgroundColor="White" TextColor="Black" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>
