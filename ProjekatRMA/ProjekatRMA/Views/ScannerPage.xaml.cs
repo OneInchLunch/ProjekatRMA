@@ -26,7 +26,8 @@ namespace ProjekatRMA.Views
         bool qrScanned = false;
         private void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
-            Device.BeginInvokeOnMainThread(() => {
+            Device.BeginInvokeOnMainThread(() =>
+            {
                 string varText = result.Text;
                 if (!qrScanned && varText == "http://en.m.wikipedia.org")
                 {
@@ -38,7 +39,10 @@ namespace ProjekatRMA.Views
                 else if (qrScanned && varText != "0000000000000")
                     barCode.Text = "Bar kod: Skenirajte bar kod na vašoj ličnoj karti";
                 else if (qrScanned && varText == "0000000000000")
+                {
                     Navigation.PushAsync(new FormView());
+                    Navigation.RemovePage(this);
+                }
             });
         }
     }
