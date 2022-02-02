@@ -2,14 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              x:Class="ProjekatRMA.Views.ScannerPage"
-             NavigationPage.HasNavigationBar="False"
-             Title="QR Scanner">
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout BackgroundColor="Wheat">
-            <Label HorizontalOptions="Center" Text="Skenirajte QR kod koji vam je dostavljen mailom" />
-            <Label HorizontalOptions="Center" x:Name="qrCode" />
-            <Label HorizontalOptions="Center" x:Name="barCode" />
-            <zxing:ZXingScannerView IsScanning="True" OnScanResult="ZXingScannerView_OnScanResult" />
+            <Label HorizontalOptions="Center" 
+                   Text="Skenirajte QR kod koji vam je dostavljen mailom" />
+            <Label HorizontalOptions="Center" 
+                   x:Name="qrCode" />
+            <Label HorizontalOptions="Center" 
+                   x:Name="barCode" />
+            <zxing:ZXingScannerView IsScanning="True" 
+                                    OnScanResult="ZXingScannerView_OnScanResult" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

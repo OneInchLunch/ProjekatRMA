@@ -18,11 +18,6 @@ namespace ProjekatRMA.Views
             InitializeComponent();
         }
 
-        private void ToBarcodeScanner(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new FormView());
-        }
-
         bool qrScanned = false;
         private void ZXingScannerView_OnScanResult(ZXing.Result result)
         {

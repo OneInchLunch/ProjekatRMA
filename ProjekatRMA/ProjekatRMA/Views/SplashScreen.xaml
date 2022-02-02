@@ -16,7 +16,14 @@
                    HorizontalTextAlignment="Center" />
         </StackLayout>
         <StackLayout>
-            <Button Clicked ="ToScanner" Text="Nastavi dalje" Padding="20,10" BackgroundColor="White" TextColor="Black" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            <Button Clicked ="ToScanner" 
+                    Text="Nastavi dalje"
+                    Padding="20,10"
+                    BackgroundColor="White" 
+                    TextColor="Black"
+                    WidthRequest="330" 
+                    HorizontalOptions="Center" 
+                    CornerRadius="20" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
