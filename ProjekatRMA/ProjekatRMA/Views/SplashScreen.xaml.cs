@@ -14,7 +14,9 @@ namespace ProjekatRMA.Views
         public SplashScreen()
         {
         InitializeComponent();
+        MessagingCenter.Send<Object>(this, "HideOsNavigationBar");
         }
+
         protected override bool OnBackButtonPressed()
         {
             return true;

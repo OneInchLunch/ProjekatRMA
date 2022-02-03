@@ -25,6 +25,10 @@ namespace ProjekatRMA.Views
             KandidatPicker.SelectedIndex = 0;
             
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
 
         private void StrankaPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -57,8 +61,7 @@ namespace ProjekatRMA.Views
                 int index = PozicijaPicker.SelectedIndex;
                 PozicijaPicker.SelectedIndex = -1;
                 LeftToVote.Rezultati.Add(LeftToVote.PozicijaList[index].Name + ": " + LeftToVote.PozicijaList[index].StrankaList[StrankaPicker.SelectedIndex].Name + ", " + 
-                                         LeftToVote.PozicijaList[index].StrankaList[StrankaPicker.SelectedIndex].KandidatList[KandidatPicker.SelectedIndex].Name + " " +
-                                         LeftToVote.PozicijaList[index].StrankaList[StrankaPicker.SelectedIndex].KandidatList[KandidatPicker.SelectedIndex].Surname);
+                                         LeftToVote.PozicijaList[index].StrankaList[StrankaPicker.SelectedIndex].KandidatList[KandidatPicker.SelectedIndex].FullName);
                 LeftToVote.PozicijaList.RemoveAt(index);
                 PozicijaPicker.ItemsSource = null;
                 if (LeftToVote.PozicijaList.Count > 0)

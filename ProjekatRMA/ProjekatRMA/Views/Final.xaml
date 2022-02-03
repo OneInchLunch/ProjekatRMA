@@ -2,16 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjekatRMA.Views.Final"
+             BackgroundColor="Wheat"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
             <StackLayout>
-            <Label Text="Glasanje završeno"
+            <Label 
+                Margin="0, 40, 0, 0"
+                Text="Glasanje završeno"
+                FontSize="Title"   
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <ScrollView>
-                <ListView x:Name="results"/>
-                </ScrollView>
-            <Button Clicked="Zavrsi_Clicked" Text="Završi" Padding="20,10" BackgroundColor="Black" TextColor="White" BorderColor="White" WidthRequest="330" HorizontalOptions="Center" CornerRadius="20" />
+            <ScrollView>
+                <ListView x:Name="results" />
+            </ScrollView>
+            <Button Margin="0,0,0,50" 
+                    Clicked="Zavrsi_Clicked" 
+                    Text="Završi"
+                    Padding="20,10" 
+                    BackgroundColor="Black" 
+                    TextColor="White"
+                    BorderColor="White" 
+                    WidthRequest="330" 
+                    HorizontalOptions="Center" 
+                    CornerRadius="20" />
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>

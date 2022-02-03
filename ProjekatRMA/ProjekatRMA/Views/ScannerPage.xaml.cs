@@ -17,24 +17,28 @@ namespace ProjekatRMA.Views
         {
             InitializeComponent();
         }
-        private void GetIp()
-        {
-            ipAddress.Text = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
-        }
-        private void ToFormView(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new FormView());
-        }
 
-
-        private void OnScanResult(ZXing.Result result)
+        bool qrScanned = false;
+        private void ZXingScannerView_OnScanResult(ZXing.Result result)
         {
-            Device.BeginInvokeOnMainThread(() => {
-                GetIp();
-                scanResultText.Text = result.Text + " (type: " + result.BarcodeFormat + ")";
-                Navigation.PushAsync(new FormView());
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                string varText = result.Text;
+                if (!qrScanned && varText == "http://en.m.wikipedia.org")
+                {
+                    qrCode.Text = "QR kod: OK";
+                    qrScanned = true;
+                }
+                else if (!qrScanned)
+                    qrCode.Text = "QR kod: Not OK";
+                else if (qrScanned && varText != "0000000000000")
+                    barCode.Text = "Bar kod: Skenirajte bar kod na vašoj ličnoj karti";
+                else if (qrScanned && varText == "0000000000000")
+                {
+                    Navigation.PushAsync(new FormView());
+                    Navigation.RemovePage(this);
+                }
             });
-
         }
     }
 }
